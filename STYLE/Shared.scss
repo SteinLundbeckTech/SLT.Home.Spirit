@@ -1,0 +1,103 @@
+﻿@import "Creator//Media";
+
+body {
+    background: url("/IMAGE/main-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#BlogLinkWrap {
+    position: absolute;
+    left: 0;
+    padding: 8px;
+
+    & > a {
+        color: #00c8ff;
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+            color: #2c93b0;
+        }
+
+        & i.globe {
+            margin-right: 3px;
+        }
+    }
+}
+
+#SLTechLogo {
+    width: 48px;
+    margin-right: 14px;
+}
+
+#NameWrap {
+    color: #5397a7;
+    text-shadow: black 2px 2px;
+    font-size: 30px;
+    margin: 0px;
+}
+
+#SLNameWrap {
+    position: relative;
+    top: -46px;
+    color: #1f5dac;
+    text-shadow: black 2px 2px;
+
+    & > h2 {
+        font-size: 21px;
+    }
+}
+
+#AssetsSetCultureCommonWrap {
+    & img.flag {
+        width: 30px;
+        margin-right: 8px;
+        margin-top: 6px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    & span.separator {
+        $mrg: 8px;
+
+        margin-right: $mrg;
+        margin-left: $mrg;
+    }
+
+    & span.separator.envelope {
+        position: relative;
+        top: -2px;
+    }
+
+    & i.assets-icon.envelope-full {
+        position: relative;
+        top: -1px;
+    }
+}
+
+@include media() {
+    #SLTechLogo {
+        width: 80px;
+    }
+
+    #NameWrap {
+        font-size: 50px;
+    }
+
+    #SLNameWrap {
+        & > h2 {
+            font-size: 31px;
+        }
+    }
+
+    #AssetsSetCultureCommonWrap {
+        & img.flag {
+            width: 51px;
+        }
+    }
+}

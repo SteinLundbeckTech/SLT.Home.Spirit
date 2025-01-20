@@ -1,0 +1,105 @@
+#GdprWrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-top: 2px solid black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#GdprWrap > button {
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: white;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#GdprWrap > button:hover {
+  cursor: pointer;
+}.assets-icon.icon-mouse-pointer {
+  transition: all 0.2s ease;
+}
+.assets-icon.icon-mouse-pointer:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.assets-icon.icon-google-material {
+  font-size: 22px;
+  position: relative;
+  top: 5px;
+}
+.assets-icon.icon-fa {
+  font-size: 18px;
+  position: relative;
+  top: 1px;
+}#AssetsSetCultureCommonWrap {
+  display: flex;
+  align-items: center;
+}
+#AssetsSetCultureCommonWrap.position-left {
+  justify-content: flex-start;
+}
+#AssetsSetCultureCommonWrap.position-center {
+  justify-content: center;
+}
+#AssetsSetCultureCommonWrap.position-right {
+  justify-content: flex-end;
+}
+#AssetsSetCultureCommonWrap img.flag {
+  width: 51px;
+}img.assets-shared-logo.logo-1x {
+  width: 100%;
+  max-width: 47px;
+  height: auto;
+}
+img.assets-shared-logo.logo-2x {
+  width: 100%;
+  max-width: 73px;
+  height: auto;
+}
+img.assets-shared-logo.logo-3x {
+  width: 100%;
+  max-width: 102px;
+  height: auto;
+}
+img.assets-shared-logo.logo-4x {
+  width: 100%;
+  max-width: 139px;
+  height: auto;
+}
+img.assets-shared-logo.logo-5x {
+  width: 100%;
+  max-width: 182px;
+  height: auto;
+}
+img.assets-shared-logo.logo-6x {
+  width: 100%;
+  max-width: 242px;
+  height: auto;
+}
+img.assets-shared-logo.logo-7x {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+img.assets-shared-logo.logo-8x {
+  width: 100%;
+  max-width: 306px;
+  height: auto;
+}
+img.assets-shared-logo.logo-9x {
+  width: 100%;
+  max-width: 330px;
+  height: auto;
+}
+img.assets-shared-logo.logo-10x {
+  width: 100%;
+  max-width: 362px;
+  height: auto;
+}

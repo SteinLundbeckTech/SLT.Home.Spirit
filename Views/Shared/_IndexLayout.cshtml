@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="@Utility.Cache.Culture.Language" class="creator-xl">
+<head>
+    <site:head files="Shared.css, IndexLayout.css" />
+
+    @await RenderSectionAsync("STYLE", required: false)
+</head>
+<body>
+    <site:pre />
+
+    <div id="BlogLinkWrap">
+        <a href="https://blog.sltech.no" title="Blog">
+            <icon awesome="ArrowLeft" />&nbsp;&nbsp;<icon awesome="Globe" />Blog
+        </a>
+    </div>
+
+    <div class="page-wrap">
+        <header>
+            <site:set-culture-common position="Right" />
+
+            <div class="pad-lg flex-center-center">
+                <img id="SLTechLogo" src="https://assets.sltech.no/shared/image/logo/slTech.png" alt="SL Tech logo" /><h1 id="NameWrap">SL Tech</h1>
+            </div>
+            <div id="SLNameWrap" class="align-center">
+                <h2 class="h2">Stein Lundbeck</h2>
+            </div>
+        </header>
+        <div class="content-wrap pad-lg">
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="align-center">
+            <div class="flex-center-center">
+                <span class="copywrite-wrap">&copy; 2025 - Stein Lundbeck</span>
+                <a href="mailto:stein@sltech.no" title="Email"><span class="separator envelope">/</span><icon awesome="EnvelopeFull" /></a>
+            </div>
+
+        </footer>
+    </div>
+
+    <site:footer />
+
+    @await RenderSectionAsync("SCRIPT", required: false)
+</body>
+</html>

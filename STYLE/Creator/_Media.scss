@@ -1,0 +1,61 @@
+﻿$mediaDevices: ( Phone: XS, Tablet: SM, Laptop: MD, Computer: LG, Screen: XL );
+$mediaBreakpoints: ( XS: 0px, SM: 576px, MD: 768px, LG: 992px, XL: 1200px );
+$mediaOrientation: ( 0: Any, 1: Portrait, 2: Landscape );
+$mediaRetina: ( 1.25: 120dpi, 1.3: 124.8dpi, 1.5: 144dpi, 2: 192dpi );
+
+@mixin media($size: MD, $orientation: Any, $mode: Up, $minWidth: null, $maxWidth: null) {
+    $mode: to-upper-case(inspect($mode));
+    $size: to-upper-case(inspect($size));
+    $width: map-get($mediaBreakpoints, $size);
+    $query: null;
+
+    @if ($minWidth) {
+        $width: $minWidth;
+    }
+
+    @if ($mode == UP) {
+        $query: "(min-width: " + $width + ")";
+    }
+    @else if ($mode == DOWN) {
+        $query: "(max-width: " + $width + ")";
+    }
+    @else if ($mode == ONLY) {
+        $query: "(min-width: " + $width + ")";
+        $max: null;
+
+        @if ($maxWidth) {
+            $max: $maxWidth;
+        }
+        @else {
+            @if ($size == XS) {
+                $max: map-get($mediaBreakpoints, SM);
+            }
+            @else if ($size == SM) {
+                $max: map-get($mediaBreakpoints, MD);
+            }
+            @else if ($size == MD) {
+                $max: map-get($mediaBreakpoints, LG);
+            }
+            @else if ($size == LG) {
+                $max: map-get($mediaBreakpoints, XL);
+            }
+        }
+
+        @if ($max) {
+            $query: $query + " and (max-width: " + $max + ")";
+        }
+    }
+
+    @if not ($orientation == Any) {
+        $query: $query + " and (orientation: " + to-lower-case(inspect($orientation)) + ")";
+    }
+
+    @media #{$query} {
+        @content;
+    }
+}
+
+@mixin mediaDevice($device: Laptop, $orientation: Any, $mode: Up, $minWidth, $maxWidth) {
+
+    @include media(map-get($mediaDevices, $device));
+}

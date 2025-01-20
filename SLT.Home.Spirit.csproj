@@ -7,18 +7,51 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\SCRIPT\Assets\GDPR.js" />
+    <Content Remove="wwwroot\SCRIPT\Assets\GDPR.js.map" />
+    <Content Remove="wwwroot\SCRIPT\Assets\GDPR.min.js" />
+    <Content Remove="wwwroot\SCRIPT\Assets\GDPR.min.js.map" />
+    <Content Remove="wwwroot\SCRIPT\Assets\SLT.Assets.js" />
+    <Content Remove="wwwroot\SCRIPT\Assets\SLT.Assets.js.map" />
+    <Content Remove="wwwroot\SCRIPT\Assets\SLT.Assets.min.js" />
+    <Content Remove="wwwroot\SCRIPT\Assets\SLT.Assets.min.js.map" />
+    <Content Remove="wwwroot\SCRIPT\Assets\Utility.js" />
+    <Content Remove="wwwroot\SCRIPT\Assets\Utility.js.map" />
+    <Content Remove="wwwroot\SCRIPT\Assets\Utility.min.js" />
+    <Content Remove="wwwroot\SCRIPT\Assets\Utility.min.js.map" />
+    <Content Remove="wwwroot\SCRIPT\Assets\WebRequest.js" />
+    <Content Remove="wwwroot\SCRIPT\Assets\WebRequest.js.map" />
+    <Content Remove="wwwroot\SCRIPT\Assets\WebRequest.min.js" />
+    <Content Remove="wwwroot\SCRIPT\Assets\WebRequest.min.js.map" />
+    <Content Remove="wwwroot\STYLE\Assets\SLT.Assets.css" />
+    <Content Remove="wwwroot\STYLE\Assets\SLT.Assets.min.css" />
+    <Content Remove="wwwroot\STYLE\Creator\Creator.css" />
+    <Content Remove="wwwroot\STYLE\Creator\Creator.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\DEV\Assets\SLT.Assets\SLT.Assets.csproj" />
-    <ProjectReference Include="..\..\DEV\SteinLundbeck.Components.Core\SteinLundbeck.Components.Core.csproj" />
     <ProjectReference Include="..\..\DEV\SteinLundbeck.Components\SteinLundbeck.Components.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="SCRIPT\" />
-    <Folder Include="STYLE\" />
-    <Folder Include="wwwroot\SCRIPT\" />
-    <Folder Include="wwwroot\STYLE\Assets\" />
-    <Folder Include="wwwroot\STYLE\Creator\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\SCRIPT\Assets\GDPR.js" />
+    <None Include="wwwroot\SCRIPT\Assets\GDPR.js.map" />
+    <None Include="wwwroot\SCRIPT\Assets\GDPR.min.js" />
+    <None Include="wwwroot\SCRIPT\Assets\GDPR.min.js.map" />
+    <None Include="wwwroot\SCRIPT\Assets\WebRequest.js" />
+    <None Include="wwwroot\SCRIPT\Assets\WebRequest.js.map" />
+    <None Include="wwwroot\SCRIPT\Assets\WebRequest.min.js" />
+    <None Include="wwwroot\SCRIPT\Assets\WebRequest.min.js.map" />
+    <None Include="wwwroot\STYLE\Assets\SLT.Assets.css" />
+    <None Include="wwwroot\STYLE\Assets\SLT.Assets.min.css" />
+    <None Include="wwwroot\STYLE\Creator\Creator.css" />
+    <None Include="wwwroot\STYLE\Creator\Creator.min.css" />
   </ItemGroup>
 
 </Project>

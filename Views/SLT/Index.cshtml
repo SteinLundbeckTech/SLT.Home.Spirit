@@ -1,1 +1,60 @@
-﻿
+﻿@using SLT.Assets.Data.Model.Content;
+
+@{
+    Layout = "_IndexLayout";
+}
+
+<site:view files="Index.css" />
+
+<div>
+    <header class="align-center">
+        <h3>@Utility.Local.GetValue("BasicSlogan")</h3>
+    </header>
+    <div class="section-one">
+        <img src="/IMAGE/illu-map-device.png" alt="Web sitemap" class="r" />
+        <div class="txt-one">
+            <div class="list-wrap mrg-auto dis-table">
+                <ul class="info-list">
+                    <li>Design</li>
+                    <li>@Utility.Local.GetValue("WordDevelopment")</li>
+                    <li>Hosting > @Utility.Local.GetValue("ServiceList")</li>
+                </ul>
+                <div class="pad-md align-center">
+                    <a asp-controller="SLT" asp-action="Services" title="@Utility.Local.GetValue("RedMore")" class="read-more-link read-button"><icon awesome="InfoCircle" />@Utility.Local.GetValue("ReadMore")</a>
+                </div>
+            </div>
+            <div class="products-wrap align-center">
+                <h4 class="h4">@Utility.Local.GetValue("PhraseProductsFromSLT")</h4>
+                <div class="product-icon-wrap">
+                    <div class="flex-center-center mrg-md">
+                        <div>
+                            <a asp-controller="SLT" asp-action="Creator" title="Creator framework" class="prod-item-wrap">
+                                <img logo="Creator" class="prod-img-one" />
+                                <h5 class="h4 clean product-name">Creator</h5>
+                            </a>
+                        </div>
+                        <div>
+                            <a asp-controller="SLT" asp-action="Assets" title="SLT Assets" class="prod-item-wrap">
+                                <img logo="Assets" class="prod-img-one" />
+                                <h5 class="h4 clean product-name">Assets</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <hr style="width:40%;" class="mrg-lg mrg-auto" />
+                    <div>
+                        <a asp-controller="SLT" asp-action="Tech" title="Tech" class="align-center">
+                            <div class="flex-center-center tech-logo-wrap">
+                                <img logo="NetCore" alt="ASP.NET Core" />
+                                <img logo="JavaScript" alt="JavaScript" />
+                                <img logo="CSS" alt="CSS" />
+                                <img logo="CSharp" alt="C#" />
+                            </div>
+
+                            <h5 class="h4 clean product-name mrg-xs-top">@Utility.Local.GetValue("WordTechnology")</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

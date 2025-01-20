@@ -1,14 +1,30 @@
 ﻿<!DOCTYPE html>
-<html lang="no">
+<html lang="no" class="creator-xxl">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - SLT.Home.Spirit</title>
+    <site:head />
 
     @await RenderSectionAsync("STYLE", required: false)
 </head>
 <body>
-    @RenderBody()
+    <site:pre />
+
+    <div id="PageWrap">
+        <site:set-culture-common position="Right" />
+
+        <div id="ContentWrap">
+            <main role="main" class="pad-xxl-top">
+                @RenderBody()
+            </main>
+        </div>
+
+        <site:gdpr />
+
+        <footer>
+            <site:footer />
+
+
+        </footer>
+    </div>
 
     @await RenderSectionAsync("SCRIPT", required: false)
 </body>
