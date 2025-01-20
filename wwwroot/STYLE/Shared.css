@@ -53,9 +53,23 @@ a {
   text-decoration: none;
 }
 
+footer {
+  line-height: 2;
+  color: white;
+  padding: 10px;
+}
+footer a {
+  color: white;
+}
+footer a:hover {
+  color: #00c8ff;
+}
+footer i.assets-icon {
+  margin-right: 1px;
+}
 footer span.separator {
-  margin-right: 8px;
-  margin-left: 8px;
+  position: relative;
+  top: -14px;
 }
 footer span.separator.envelope {
   position: relative;
@@ -78,5 +92,13 @@ footer i.assets-icon.envelope-full {
   }
   #AssetsSetCultureCommonWrap img.flag {
     width: 51px;
+  }
+  footer span.separator {
+    margin-right: 8px;
+    margin-left: 8px;
+    top: unset;
+  }
+  footer i.assets-icon {
+    margin-right: 6px;
   }
 }

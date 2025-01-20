@@ -56,6 +56,13 @@ div.products-wrap {
         color: #031d2f;
     }
 
+    & > h4 > i.assets-icon {
+        position: relative;
+        top: 4px;
+        margin-right: 10px;
+        font-size: 30px;
+    }
+
     & div.product-icon-wrap {
         & h5 {
             font-size: 14px;
@@ -89,6 +96,14 @@ div.products-wrap {
                     margin-right: 40px;
                 }
             }
+        }
+    }
+
+    div.products-wrap {
+        & > h4 > i.assets-icon {
+            top: 7px;
+            margin-right: 10px;
+            font-size: 40px;
         }
     }
 }

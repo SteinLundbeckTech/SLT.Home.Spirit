@@ -62,11 +62,27 @@ a {
 }
 
 footer {
-    & span.separator {
-        $mrg: 8px;
+    $clr: white;
 
-        margin-right: $mrg;
-        margin-left: $mrg;
+    line-height: 2;
+    color: $clr;
+    padding: 10px;
+
+    & a {
+        color: $clr;
+
+        &:hover {
+            color: #00c8ff;
+        }
+    }
+
+    & i.assets-icon {
+        margin-right: 1px;
+    }
+
+    & span.separator {
+        position: relative;
+        top: -14px;
     }
 
     & span.separator.envelope {
@@ -98,6 +114,20 @@ footer {
     #AssetsSetCultureCommonWrap {
         & img.flag {
             width: 51px;
+        }
+    }
+
+    footer {
+        & span.separator {
+            $mrg: 8px;
+
+            margin-right: $mrg;
+            margin-left: $mrg;
+            top: unset;
+        }
+
+        & i.assets-icon {
+            margin-right: 6px;
         }
     }
 }

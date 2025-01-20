@@ -8,7 +8,7 @@
 
 <div>
     <header class="align-center">
-        <h3>@Utility.Local.GetValue("BasicSlogan")</h3>
+        <h3>@Utility.LocalValue["BasicSlogan"].Value</h3>
     </header>
     <div class="section-one">
         <img src="/IMAGE/illu-map-device.png" alt="Web sitemap" class="r" />
@@ -16,15 +16,15 @@
             <div class="list-wrap mrg-auto dis-table">
                 <ul class="info-list">
                     <li>Design</li>
-                    <li>@Utility.Local.GetValue("WordDevelopment")</li>
-                    <li>Hosting > @Utility.Local.GetValue("ServiceList")</li>
+                    <li>@Utility.LocalValue["WordDevelopment"].Value</li>
+                    <li>Hosting > @Utility.LocalValue["ServiceList"].Value</li>
                 </ul>
                 <div class="pad-md align-center">
-                    <a asp-controller="SLT" asp-action="Services" title="@Utility.Local.GetValue("RedMore")" class="read-more-link read-button"><icon awesome="InfoCircle" />@Utility.Local.GetValue("ReadMore")</a>
+                    <a asp-controller="SLT" asp-action="Services" title="@Utility.LocalValue["ReadMore"].Value" class="read-more-link read-button"><icon awesome="InfoCircle" />@Utility.LocalValue["ReadMore"].Value</a>
                 </div>
             </div>
             <div class="products-wrap align-center">
-                <h4 class="h4">@Utility.Local.GetValue("PhraseProductsFromSLT")</h4>
+                <h4 class="h4"><icon awesome="Code" />@Utility.LocalValue["PhraseProductsFromSLT"].Value</h4>
                 <div class="product-icon-wrap">
                     <div class="flex-center-center mrg-md">
                         <div>
@@ -50,7 +50,7 @@
                                 <img logo="CSharp" alt="C#" />
                             </div>
 
-                            <h5 class="h4 clean product-name mrg-xs-top">@Utility.Local.GetValue("WordTechnology")</h5>
+                            <h5 class="h4 clean product-name mrg-xs-top">@Utility.LocalValue["WordTechnology"].Value</h5>
                         </a>
                     </div>
                 </div>

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using SLT.Assets.Extension;
+
+<!DOCTYPE html>
 <html lang="@Utility.Cache.Culture.Language" class="creator-xl">
 <head>
     <site:head files="Shared.css, IndexLayout.css" />
@@ -36,7 +38,19 @@
                 <span class="copywrite-wrap">&copy; 2025 - Stein Lundbeck</span>
                 <a href="mailto:stein@sltech.no" title="Email"><span class="separator envelope">/</span><icon awesome="EnvelopeFull" /></a>
             </div>
-
+            <div class="flex-center-center">
+                <a asp-controller="SLT" asp-action="Index" title="@Utility.LocalValue["WordHome"].Value"><icon awesome="House" />@Utility.LocalValue["WordHome"].Value</a>
+                <span class="separator">|</span>
+                <a asp-controller="SLT" asp-action="Creator" title="Creator framework"><icon awesome="Code" />Creator</a>
+                <span class="separator">|</span>
+                <a asp-controller="SLT" asp-action="Assets" title="SLT Assets"><icon awesome="Code" />Assets</a>
+                <span class="separator">|</span>
+                <a asp-controller="SLT" asp-action="Creator" title="@Utility.LocalValue["WordTechnology"].Value"><icon awesome="Code" />@Utility.LocalValue["WordTechnology"].Value</a>
+                <span class="separator">|</span>
+                <a href="https://github.com/SteinLundbeckTech" title="GitHub" target="_blank"><icon awesome="GitHubLogo" />GitHub</a>
+                <span class="separator">|</span>
+                <a href="@("/CONTENT/" + (Utility.Cache.Culture.IsNorwegian() ? "Stein-Lundbeck-CV.pdf" : "Stein-Lundbeck-CV-english.pdf"))" title="CV"><icon awesome="File" />CV</a>
+            </div>
         </footer>
     </div>
 

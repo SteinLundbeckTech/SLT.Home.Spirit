@@ -1,30 +1,52 @@
 ﻿<!DOCTYPE html>
-<html lang="no" class="creator-xxl">
+<html lang="@Utility.Cache.Culture.Language" class="creator-xl">
 <head>
-    <site:head />
+    <site:head files="Shared.css, Layout.css" />
 
     @await RenderSectionAsync("STYLE", required: false)
 </head>
 <body>
     <site:pre />
 
-    <div id="PageWrap">
-        <site:set-culture-common position="Right" />
+    <div class="page-wrap">
+        <header>
+            <site:set-culture-common position="Right" />
 
-        <div id="ContentWrap">
-            <main role="main" class="pad-xxl-top">
+            <div class="pad-lg flex-center-center">
+                <img id="SLTechLogo" src="https://assets.sltech.no/shared/image/logo/slTech.png" alt="SL Tech logo" /><h1 id="NameWrap">SL Tech</h1>
+            </div>
+            <div id="SLNameWrap" class="align-center">
+                <h2 class="h2">Stein Lundbeck</h2>
+            </div>
+        </header>
+        <div class="content-wrap pad-lg">
+            <main role="main">
                 @RenderBody()
             </main>
         </div>
 
-        <site:gdpr />
-
-        <footer>
-            <site:footer />
-
-
+        <footer class="align-center">
+            <div class="flex-center-center">
+                <span class="copywrite-wrap">&copy; 2025 - Stein Lundbeck</span>
+                <a href="mailto:stein@sltech.no" title="Email"><span class="separator envelope">/</span><icon awesome="EnvelopeFull" /></a>
+            </div>
+            <div class="flex-center-center">
+                <a asp-controller="SLT" asp-action="Index" title="@Utility.LocalValue["WordHome"].Value"><icon awesome="House" />@Utility.LocalValue["WordHome"].Value</a>
+                <span class="separator">|</span>
+                <a asp-controller="SLT" asp-action="Creator" title="Creator framework"><icon awesome="Code" />Creator</a>
+                <span class="separator">|</span>
+                <a asp-controller="SLT" asp-action="Assets" title="SLT Assets"><icon awesome="Code" />Assets</a>
+                <span class="separator">|</span>
+                <a asp-controller="SLT" asp-action="Creator" title="@Utility.LocalValue["WordTechnology"].Value"><icon awesome="Code" />@Utility.LocalValue["WordTechnology"].Value</a>
+                <span class="separator">|</span>
+                <a href="https://github.com/SteinLundbeckTech" title="GitHub" target="_blank"><icon awesome="GitHubLogo" />GitHub</a>
+                <span class="separator">|</span>
+                <a href="@("/CONTENT/" + (Utility.Cache.Culture.IsNorwegian() ? "CV.pdf" : "CV-english.pdf"))" title="CV"><icon awesome="File" />CV</a>
+            </div>
         </footer>
     </div>
+
+    <site:footer />
 
     @await RenderSectionAsync("SCRIPT", required: false)
 </body>

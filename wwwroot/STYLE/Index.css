@@ -42,6 +42,12 @@ div.products-wrap a.prod-item-wrap img.prod-img-one {
 div.products-wrap a {
   color: #031d2f;
 }
+div.products-wrap > h4 > i.assets-icon {
+  position: relative;
+  top: 4px;
+  margin-right: 10px;
+  font-size: 30px;
+}
 div.products-wrap div.product-icon-wrap h5 {
   font-size: 14px;
 }
@@ -65,5 +71,10 @@ div.products-wrap div.tech-logo-wrap > img {
   }
   div.section-one div.txt-one ul.info-list li {
     margin-right: 40px;
+  }
+  div.products-wrap > h4 > i.assets-icon {
+    top: 7px;
+    margin-right: 10px;
+    font-size: 40px;
   }
 }
