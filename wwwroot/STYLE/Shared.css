@@ -1,46 +1,40 @@
+@font-face {
+  font-family: BrandFont;
+  src: url("CronosPro-Capt.otf");
+}
 body {
-  background: url("/IMAGE/main-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
+  color: #0d2749;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#BlogLinkWrap {
-  position: absolute;
-  left: 0;
-  padding: 8px;
-}
-#BlogLinkWrap > a {
-  color: #00c8ff;
-  text-decoration: none;
-}
-#BlogLinkWrap > a:hover {
-  cursor: pointer;
-  color: #2c93b0;
-}
-#BlogLinkWrap > a i.globe {
-  margin-right: 3px;
-}
-
 #SLTechLogo {
-  width: 48px;
-  margin-right: 14px;
+  display: inline-block;
 }
-
-#NameWrap {
-  color: #5397a7;
-  text-shadow: black 2px 2px;
-  font-size: 30px;
-  margin: 0px;
+#SLTechLogo > div.content-wrap {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
 }
-
-#SLNameWrap {
+#SLTechLogo > div.content-wrap > img.logo {
+  width: 100%;
   position: relative;
-  top: -46px;
-  color: #1f5dac;
-  text-shadow: black 2px 2px;
+  top: 19px;
 }
-#SLNameWrap > h2 {
-  font-size: 21px;
+#SLTechLogo > div.content-wrap > .slt-name {
+  color: #0d2749;
+  font-family: BrandFont;
+  font-size: 2.8rem;
+}
+#SLTechLogo > div.content-wrap > .sl-name {
+  color: #88c9f7;
+  font-family: BrandFont;
+  font-size: 1rem;
+  margin: 0px;
+  grid-column: 2;
+  position: relative;
+  top: -33px;
+  left: 10px;
 }
 
 #AssetsSetCultureCommonWrap img.flag {
@@ -49,47 +43,58 @@ body {
   margin-top: 6px;
 }
 
+.read-button {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 28px;
+  padding-right: 28px;
+  border: 2px solid #1f5dac;
+  background-color: #88c9f7;
+  color: #09395b;
+  font-size: 15px;
+  position: relative;
+  top: 20px;
+}
+.read-button:hover {
+  background-color: rgba(136, 201, 247, 0.7);
+}
+.read-button > i.assets-icon.info-circle {
+  position: relative;
+  margin-right: 10px;
+}
+
 a {
   text-decoration: none;
 }
 
 footer {
-  line-height: 2;
-  color: white;
-  padding: 10px;
+  color: #1f5dac;
+  padding: 30px;
 }
 footer a {
-  color: white;
+  color: #1f5dac;
 }
 footer a:hover {
-  color: #00c8ff;
+  color: #0d2749;
 }
 footer i.assets-icon {
   margin-right: 1px;
+}
+footer img.tech-logo {
+  width: 20px !important;
+  position: relative;
+  top: 5px;
 }
 footer span.separator {
   position: relative;
   top: -14px;
 }
-footer span.separator.envelope {
-  position: relative;
-  top: -2px;
-}
 footer i.assets-icon.envelope-full {
   position: relative;
-  top: -1px;
+  top: 2px;
 }
 
 @media (min-width: 768px) {
-  #SLTechLogo {
-    width: 80px;
-  }
-  #NameWrap {
-    font-size: 50px;
-  }
-  #SLNameWrap > h2 {
-    font-size: 31px;
-  }
   #AssetsSetCultureCommonWrap img.flag {
     width: 51px;
   }

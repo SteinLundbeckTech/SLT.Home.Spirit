@@ -7,11 +7,9 @@
 <div class="flex-center-center">
     <a asp-controller="SLT" asp-action="Index" title="@Utility.LocalValue["WordHome"].Value"><icon awesome="House" />@Utility.LocalValue["WordHome"].Value</a>
     <span class="separator">|</span>
-    <a asp-controller="Product" asp-action="Creator" title="Creator framework"><icon awesome="Code" />Creator</a>
+    <a asp-controller="SLT" asp-action="Products" title="@Utility.LocalValue["WordProducts"].Value"><icon awesome="Code" />@Utility.LocalValue["WordProducts"].Value</a>
     <span class="separator">|</span>
-    <a asp-controller="Product" asp-action="Assets" title="SLT Assets"><icon awesome="Code" />Assets</a>
-    <span class="separator">|</span>
-    <a asp-controller="SLT" asp-action="Tech" title="@Utility.LocalValue["WordTechnology"].Value"><icon awesome="Code" />@Utility.LocalValue["WordTechnology"].Value</a>
+    <a asp-controller="SLT" asp-action="Technology" title="@Utility.LocalValue["WordTechnology"].Value"><icon awesome="Gears" />@Utility.LocalValue["WordTechnology"].Value</a>
     <span class="separator">|</span>
     <a href="https://github.com/SteinLundbeckTech" title="GitHub" target="_blank"><icon awesome="GitHubLogo" />GitHub</a>
     <span class="separator">|</span>

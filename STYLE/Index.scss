@@ -1,109 +1,144 @@
-﻿@import "Creator//Media";
+﻿@use "Creator//Media" as media;
+
+@font-face {
+    font-family: BrandFont;
+    src: url("CronosPro-Capt.otf");
+}
+
+div.section-services {
+    background-color: #ffa400;
+    text-align: center;
+
+    & > h2.slogan {
+        font-size: 1rem;
+    }
+
+    & > div.list-wrap > h3 {
+        font-size: 0.8rem;
+    }
+}
 
 div.section-one {
-    display: grid;
-    grid-template-columns: 1fr;
+    & > div.product-icon-wrap {
+        & > div {
+            margin-left: 37px;
+            text-align: center;
 
-    & div.txt-one {
-        padding: 8px;
-        font-size: 17px;
-
-        & ul.info-list {
-            display: unset;
+            & span.name {
+                font-size: 11px;
+                font-weight: bold;
+            }
         }
     }
 }
 
-.read-button {
-    $padVer: 9px;
-    $padHor: 28px;
-
-    padding-top: $padVer;
-    padding-bottom: $padVer;
-    padding-left: $padHor;
-    padding-right: $padHor;
-    border: 2px solid #0094ff;
-    background-color: #88c9f7;
-    color: #09395b;
-    font-size: 15px;
-
-    &:hover {
-        background-color: #7cb0d4;
-    }
-
-    & > i.assets-icon.info-circle {
+div.section-two {
+    & .section-label > .section-icon {
         position: relative;
-        margin-right: 10px;
-    }
-}
-
-div.products-wrap {
-    margin-top: 42px;
-
-    & a.prod-item-wrap {
-        $mrg: 24px;
-
-        margin-left: $mrg;
-        margin-right: $mrg;
-
-        & img.prod-img-one {
-            position: relative;
-            left: -10px;
-        }
-    }
-
-    & a {
-        color: #031d2f;
-    }
-
-    & > h4 > i.assets-icon {
-        position: relative;
-        top: 4px;
-        margin-right: 10px;
-        font-size: 30px;
-    }
-
-    & div.product-icon-wrap {
-        & h5 {
-            font-size: 14px;
-        }
+        top: -2px;
     }
 
     & div.tech-logo-wrap {
         & > img {
-            $mrg: 5px;
-
-            margin-left: $mrg;
-            margin-right: $mrg;
+            margin: 4px;
         }
     }
 }
 
-@include media() {
+div.section-one, div.section-two {
+    background-color: #2074dc;
+}
+
+div.section-services, div.section-one, div.section-two {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 10px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+
+    & .section-label {
+        font-family: BrandFont;
+        font-size: 1.2rem;
+        color: #09395b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 24px;
+
+        & .section-icon {
+            font-size: 1.3rem;
+            margin-right: 4px;
+        }
+    }
+
+    & > div.read-more-wrap {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+}
+
+hr.separator {
+    width: 66%;
+    opacity: 8;
+    margin-bottom: 20px;
+}
+
+@include media.media() {
+    div.section-services {
+        & > h2.slogan {
+            font-size: 2.2rem;
+        }
+
+        & > div.list-wrap > h3 {
+            font-size: 1.2rem;
+        }
+    }
+
     div.section-one {
-        grid-template-columns: 1fr 2fr;
+        & > div.product-icon-wrap {
+            & > div {
+                text-align: center;
 
-        & div.txt-one {
-            padding: 22px;
-            font-size: 24px;
-
-            & ul.info-list {
-                margin: 0;
-                padding: 0;
-                display: flex;
-
-                & li {
-                    margin-right: 40px;
+                & span.name {
+                    font-size: 14px;
                 }
             }
         }
     }
 
-    div.products-wrap {
-        & > h4 > i.assets-icon {
-            top: 7px;
-            margin-right: 10px;
-            font-size: 40px;
+    div.section-two {
+        & div.tech-logo-wrap {
+            & > img {
+                margin: 11px;
+            }
         }
+    }
+
+    div.section-services, div.section-one, div.section-two {
+        width: 67%;
+        padding-top: 36px;
+        margin-bottom: 50px;
+
+        & .section-label {
+            font-size: 3rem;
+            margin-bottom: 50px;
+
+            & .section-icon {
+                font-size: 3.4rem;
+                margin-right: 6px;
+            }
+        }
+
+        & > div.read-more-wrap {
+            text-align: center;
+            margin-top: 46px;
+            margin-bottom: 80px;
+        }
+    }
+
+    hr.separator {
+        margin-bottom: 40px;
     }
 }

@@ -7,54 +7,59 @@
 <site:view files="Index.css" />
 
 <div>
-    <header class="align-center">
-        <h3>@Utility.LocalValue["BasicSlogan"].Value</h3>
-    </header>
-    <div class="section-one">
-        <img src="/IMAGE/illu-map-device.png" alt="Web sitemap" class="r" />
-        <div class="txt-one">
-            <div class="list-wrap mrg-auto dis-table">
-                <ul class="info-list">
-                    <li>Design</li>
-                    <li>@Utility.LocalValue["WordDevelopment"].Value</li>
-                    <li>Hosting > @Utility.LocalValue["ServiceList"].Value</li>
-                </ul>
-                <div class="pad-md align-center">
-                    <a asp-controller="SLT" asp-action="Services" title="@Utility.LocalValue["ReadMore"].Value" class="read-more-link read-button"><icon awesome="InfoCircle" />@Utility.LocalValue["ReadMore"].Value</a>
-                </div>
-            </div>
-            <div class="products-wrap align-center">
-                <h4 class="h4"><icon awesome="Code" />@Utility.LocalValue["PhraseProductsFromSLT"].Value</h4>
-                <div class="product-icon-wrap">
-                    <div class="flex-center-center mrg-md">
-                        <div>
-                            <a asp-controller="SLT" asp-action="Creator" title="Creator framework" class="prod-item-wrap">
-                                <img logo="Creator" class="prod-img-one" />
-                                <h5 class="h4 clean product-name">Creator</h5>
-                            </a>
-                        </div>
-                        <div>
-                            <a asp-controller="SLT" asp-action="Assets" title="SLT Assets" class="prod-item-wrap">
-                                <img logo="Assets" class="prod-img-one" />
-                                <h5 class="h4 clean product-name">Assets</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <hr style="width:40%;" class="mrg-lg mrg-auto" />
-                    <div>
-                        <a asp-controller="SLT" asp-action="Tech" title="Tech" class="align-center">
-                            <div class="flex-center-center tech-logo-wrap">
-                                <img logo="NetCore" alt="ASP.NET Core" />
-                                <img logo="JavaScript" alt="JavaScript" />
-                                <img logo="CSS" alt="CSS" />
-                                <img logo="CSharp" alt="C#" />
-                            </div>
+    <div class="section-services">
+        <h2 class="slogan">@Utility.LocalValue["BasicSlogan"].Value</h2>
+        <hr class="mrg-lg mrg-auto separator" />
+        <h3 class="section-label"><img src="~/IMAGE/globe-icon.png" style="width:96px;" class="section-icon" />@Utility.LocalValue["WordServices"].Value</h3>
+        <div class="mrg-lg-top list-wrap">
+            <h3>Design</h3>
+            <h3>@Utility.LocalValue["WordDevelopment"].Value</h3>
+            <h3>Hosting > @Utility.LocalValue["ServiceList"].Value</h3>
+        </div>
 
-                            <h5 class="h4 clean product-name mrg-xs-top">@Utility.LocalValue["WordTechnology"].Value</h5>
-                        </a>
-                    </div>
-                </div>
+        <div class="read-more-wrap">
+            <a asp-controller="SLT" asp-action="Services" title="@Utility.LocalValue["ReadMore"].Value" class="read-more-link read-button"><icon awesome="InfoCircle" class="section-icon" />@Utility.LocalValue["ReadMore"].Value</a>
+        </div>
+    </div>
+    <div class="section-one">
+        <hr class="mrg-lg mrg-auto separator" />
+        <h3 class="section-label"><icon awesome="Code" class="section-icon" />@Utility.LocalValue["PhraseProductsFromSLT"].Value</h3>
+        <div class="product-icon-wrap flex-center">
+            <div>
+                <a asp-controller="SLT" asp-action="Products" title="Creator framework">
+                    <img logo="Creator" class="r" />
+                </a>
+                <br />
+                <span class="name">Creator</span>
             </div>
+            <div>
+                <a asp-controller="SLT" asp-action="Products" title="SLT Assets">
+                    <img logo="Assets" class="r" />
+                    <br />
+                    <span class="name">Assets</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="read-more-wrap">
+            <a asp-controller="SLT" asp-action="Products" title="@Utility.LocalValue["ReadMore"].Value" class="read-more-link read-button"><icon awesome="InfoCircle" />@Utility.LocalValue["ReadMore"].Value</a>
+        </div>
+    </div>
+    <div class="section-two">
+        <hr class="mrg-lg mrg-auto separator" />
+        <div class="tech-wrap align-center">
+            <h3 class="section-label"><icon awesome="Gears" class="section-icon" /> @Utility.LocalValue["WordTechnology"].Value</h3>
+            <a asp-controller="SLT" asp-action="Technology" title="Tech" class="align-center">
+                <div class="flex-center-center tech-logo-wrap">
+                    <img logo="NetCore" />
+                    <img logo="JavaScript" />
+                    <img logo="CSS" />
+                    <img logo="CSharp" />
+                </div>
+            </a>
+        </div>
+        <div class="read-more-wrap">
+            <a asp-controller="SLT" asp-action="Technology" title="@Utility.LocalValue["ReadMore"].Value" class="read-more-link read-button"><icon awesome="InfoCircle" class="section-icon" />@Utility.LocalValue["ReadMore"].Value</a>
         </div>
     </div>
 </div>

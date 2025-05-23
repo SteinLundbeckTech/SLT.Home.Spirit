@@ -1,0 +1,26 @@
+#BackLink {
+  position: relative;
+  top: -18px;
+  left: -30px;
+}
+
+#TitleWrap {
+  padding: 12px;
+  background-color: #b6e6f3;
+}
+#TitleWrap > h1 {
+  font-size: 1rem;
+}
+
+main {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 88%;
+  }
+  #TitleWrap > h1 {
+    font-size: 1.7rem;
+  }
+}

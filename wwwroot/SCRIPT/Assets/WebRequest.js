@@ -111,15 +111,25 @@ class WebRequest {
                 result = new WebResult(tmp);
             }
             else {
-                console.error("Error in WebRequestUtility while fetching url \"" + options.Url + "\". Status: (" + tmp.status + ") " + tmp.statusText, fetchAsync.caller);
+                devLog("Error in WebRequestUtility while fetching url \"" + options.Url + "\". Status: (" + tmp.status + ") " + tmp.statusText, true, fetchAsync.caller, result);
             }
         }
         catch (ex) {
-            console.error("Error in fetchAsync while fetching url \"" + options.Url + "\". " + ex.message);
+            devLog("Error in fetchAsync while fetching url \"" + options.Url + "\". " + ex.message);
         }
 
         return result;
     }
 
-    static apiAsync = async (action, method = "post", routeData = [], query = {}, data = {}) => await WebRequest.fetchAsync(new WebOptions("API", action, null, query, routeData, method, null, data));
+    static apiAsync = async (action, method = "post", routeData = [], data = {}) => {
+        return await WebRequest.fetchAsync(new WebOptions("API", action, null, {}, routeData, method, null, data));
+    }
+
+    static localAsync = async (feature = "Site", action = "getCacheValue", query = {}) => {
+        return await WebRequest.fetchAsync(new WebOptions("Assets/" + feature, action, null, query, null, "get"));
+    };
 }
+
+// freeze(WebUtility);
+
+	//# sourceMappingUrl=WebRequest.js.map

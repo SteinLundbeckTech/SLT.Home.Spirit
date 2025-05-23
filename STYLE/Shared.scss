@@ -1,51 +1,48 @@
-﻿@import "Creator//Media";
+﻿@use "Creator//Media" as creator;
+@use "Shared//Colors" as color;
+@use "sass:map" as map;
+
+@font-face {
+    font-family: BrandFont;
+    src: url("CronosPro-Capt.otf");
+}
 
 body {
-    background: url("/IMAGE/main-bg.jpg") no-repeat center center fixed;
-    background-size: cover;
+    color: map.get(color.$clrs, Dark);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#BlogLinkWrap {
-    position: absolute;
-    left: 0;
-    padding: 8px;
-
-    & > a {
-        color: #00c8ff;
-        text-decoration: none;
-
-        &:hover {
-            cursor: pointer;
-            color: #2c93b0;
-        }
-
-        & i.globe {
-            margin-right: 3px;
-        }
-    }
-}
-
 #SLTechLogo {
-    width: 48px;
-    margin-right: 14px;
-}
+    display: inline-block;
 
-#NameWrap {
-    color: #5397a7;
-    text-shadow: black 2px 2px;
-    font-size: 30px;
-    margin: 0px;
-}
+    & > div.content-wrap {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        grid-template-rows: auto auto;
+        grid-gap: 10px;
 
-#SLNameWrap {
-    position: relative;
-    top: -46px;
-    color: #1f5dac;
-    text-shadow: black 2px 2px;
+        & > img.logo {
+            width: 100%;
+            position: relative;
+            top: 19px;
+        }
 
-    & > h2 {
-        font-size: 21px;
+        & > .slt-name {
+            color: map.get(color.$clrs, Dark);
+            font-family: BrandFont;
+            font-size: 2.8rem;
+        }
+
+        & > .sl-name {
+            color: map.get(color.$clrs, Lighter);
+            font-family: BrandFont;
+            font-size: 1rem;
+            margin: 0px;
+            grid-column: 2;
+            position: relative;
+            top: -33px;
+            left: 10px;
+        }
     }
 }
 
@@ -57,22 +54,46 @@ body {
     }
 }
 
+.read-button {
+    $padVer: 9px;
+    $padHor: 28px;
+
+    padding-top: $padVer;
+    padding-bottom: $padVer;
+    padding-left: $padHor;
+    padding-right: $padHor;
+    border: 2px solid map.get(color.$clrs, MediumLight);
+    background-color: map.get(color.$clrs, Lighter);
+    color: #09395b;
+    font-size: 15px;
+    position: relative;
+    top: 20px;
+
+    &:hover {
+        background-color: rgba(map.get(color.$clrs, Lighter), 0.7);
+    }
+
+    & > i.assets-icon.info-circle {
+        position: relative;
+        margin-right: 10px;
+    }
+}
+
 a {
     text-decoration: none;
 }
 
 footer {
-    $clr: white;
+    $clr: map.get(color.$clrs, DarkAlternative);
 
-    line-height: 2;
     color: $clr;
-    padding: 10px;
+    padding: 30px;
 
     & a {
         color: $clr;
 
         &:hover {
-            color: #00c8ff;
+            color: map.get(color.$clrs, Dark);
         }
     }
 
@@ -80,37 +101,24 @@ footer {
         margin-right: 1px;
     }
 
+    & img.tech-logo {
+        width: 20px !important;
+        position: relative;
+        top: 5px;
+    }
+
     & span.separator {
         position: relative;
         top: -14px;
     }
 
-    & span.separator.envelope {
-        position: relative;
-        top: -2px;
-    }
-
     & i.assets-icon.envelope-full {
         position: relative;
-        top: -1px;
+        top: 2px;
     }
 }
 
-@include media() {
-    #SLTechLogo {
-        width: 80px;
-    }
-
-    #NameWrap {
-        font-size: 50px;
-    }
-
-    #SLNameWrap {
-        & > h2 {
-            font-size: 31px;
-        }
-    }
-
+@include creator.media() {
     #AssetsSetCultureCommonWrap {
         & img.flag {
             width: 51px;
