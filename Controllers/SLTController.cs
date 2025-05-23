@@ -14,6 +14,14 @@ namespace SLT.Home.Spirit.Controllers
     public class SLTController(IHttpContextAccessor httpContext, ICacheAccessor cache) : CustomControllerBase(httpContext)
     {
         public IActionResult Index() => View();
+
+        public IActionResult Services()
+        {
+            ViewData["Title"] = cache.GetLocalValue("WordServices").Value;
+
+            return View();
+        }
+
         public IActionResult Products()
         {
             ViewData["Title"] = cache.GetLocalValue("WordProducts").Value;

@@ -7,6 +7,8 @@
 <div class="flex-center-center">
     <a asp-controller="SLT" asp-action="Index" title="@Utility.LocalValue["WordHome"].Value"><icon awesome="House" />@Utility.LocalValue["WordHome"].Value</a>
     <span class="separator">|</span>
+    <a asp-controller="SLT" asp-action="Services" title="@Utility.LocalValue["WordServices"].Value"><img src="/IMAGE/globe-icon.png" style="width:25px;position:relative;top:6px;margin-right:4px;" />@Utility.LocalValue["WordServices"].Value</a>
+    <span class="separator">|</span>
     <a asp-controller="SLT" asp-action="Products" title="@Utility.LocalValue["WordProducts"].Value"><icon awesome="Code" />@Utility.LocalValue["WordProducts"].Value</a>
     <span class="separator">|</span>
     <a asp-controller="SLT" asp-action="Technology" title="@Utility.LocalValue["WordTechnology"].Value"><icon awesome="Gears" />@Utility.LocalValue["WordTechnology"].Value</a>
@@ -14,4 +16,7 @@
     <a href="https://github.com/SteinLundbeckTech" title="GitHub" target="_blank"><icon awesome="GitHubLogo" />GitHub</a>
     <span class="separator">|</span>
     <a href="@("/CONTENT/" + (Utility.Cache.Culture.IsNorwegian() ? "Stein-Lundbeck-CV.pdf" : "Stein-Lundbeck-CV-english.pdf"))" title="CV"><icon awesome="File" />CV</a>
+</div>
+<div class="align-center">
+    <a href="https://github.com/SteinLundbeckTech/SLT.Home.Spirit" style="font-size:0.6rem;" target="_blank" title="@Utility.LocalValue["PhraseSiteSyntax"].Value"><icon awesome="Code" style="font-size:0.6rem;" />@Utility.LocalValue["PhraseSiteSyntax"].Value</a>
 </div>

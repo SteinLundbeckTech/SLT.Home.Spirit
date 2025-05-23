@@ -2,6 +2,31 @@
   font-family: BrandFont;
   src: url("CronosPro-Capt.otf");
 }
+#BlogLinkWrap {
+  font-size: 0.8rem;
+  padding-top: 4px;
+  padding-left: 6px;
+}
+#BlogLinkWrap > a {
+  text-decoration: none;
+  transition: all 2ms ease-in-out;
+  color: #ff6a00 !important;
+}
+#BlogLinkWrap > a:hover {
+  cursor: pointer;
+  color: #0094ff;
+}
+#BlogLinkWrap > a span.label {
+  position: relative;
+  top: -2px;
+}
+#BlogLinkWrap > a i.globe {
+  margin-right: 3px;
+}
+#BlogLinkWrap > a:visited {
+  color: #1f5dac;
+}
+
 div.section-services {
   background-color: #ffa400;
   text-align: center;
@@ -31,7 +56,7 @@ div.section-two div.tech-logo-wrap > img {
 }
 
 div.section-one, div.section-two {
-  background-color: #2074dc;
+  background-color: #1f5dac;
 }
 
 div.section-services, div.section-one, div.section-two {
@@ -45,7 +70,7 @@ div.section-services, div.section-one, div.section-two {
 div.section-services .section-label, div.section-one .section-label, div.section-two .section-label {
   font-family: BrandFont;
   font-size: 1.2rem;
-  color: #09395b;
+  color: #0d2749;
   display: flex;
   justify-content: center;
   align-items: center;

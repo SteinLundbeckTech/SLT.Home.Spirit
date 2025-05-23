@@ -1,12 +1,44 @@
-﻿@use "Creator//Media" as media;
+﻿@use "sass:map" as map;
+@use "Creator//Media" as media;
+@use "Shared//Colors" as clr;
 
 @font-face {
     font-family: BrandFont;
     src: url("CronosPro-Capt.otf");
 }
 
+#BlogLinkWrap {
+    font-size: 0.8rem;
+    padding-top: 4px;
+    padding-left: 6px;
+
+    & > a {
+        text-decoration: none;
+        transition: all 2ms ease-in-out;
+        color: clr.color(LightOrange) !important;
+
+        &:hover {
+            cursor: pointer;
+            color: clr.color(Light);
+        }
+
+        & span.label {
+            position: relative;
+            top: -2px;
+        }
+
+        & i.globe {
+            margin-right: 3px;
+        }
+
+        &:visited {
+            color: clr.color(MediumLight);
+        }
+    }
+}
+
 div.section-services {
-    background-color: #ffa400;
+    background-color: clr.color(Yellow);
     text-align: center;
 
     & > h2.slogan {
@@ -46,7 +78,7 @@ div.section-two {
 }
 
 div.section-one, div.section-two {
-    background-color: #2074dc;
+    background-color: clr.color(DarkAlternative);
 }
 
 div.section-services, div.section-one, div.section-two {
@@ -60,7 +92,7 @@ div.section-services, div.section-one, div.section-two {
     & .section-label {
         font-family: BrandFont;
         font-size: 1.2rem;
-        color: #09395b;
+        color: clr.color(Dark);
         display: flex;
         justify-content: center;
         align-items: center;
